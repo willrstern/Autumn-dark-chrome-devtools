@@ -1,6 +1,6 @@
 /* Autumn Dark Theme v0.4.0
  *
-/* https://github.com/willrstern/autumn-dark
+/* https://github.com/willrstern/Autumn-dark-chrome-devtools
 /*
 /* Copyright 2013, All rights reserved
 /*
@@ -41,7 +41,7 @@
 #-webkit-web-inspector .cm-js-atom { color: #FFF5B4 !important; }
 #-webkit-web-inspector .cm-js-attribute { color: #99aa00 !important; }
 #-webkit-web-inspector .cm-js-builtin { color: #5588fd !important; }
-#-webkit-web-inspector .cm-js-comment { color: #cccc99 !important; font-style: normal; }
+#-webkit-web-inspector .cm-js-comment { color: #666 !important; font-style: normal; }
 #-webkit-web-inspector .cm-js-def { color: #5588fd !important; }
 #-webkit-web-inspector .cm-js-error { background: #9D1E15 !important; color: #F8F8F8 !important; }
 #-webkit-web-inspector .cm-js-header { color: #5588fd !important; }
@@ -65,7 +65,7 @@
 #-webkit-web-inspector .cm-css-atom { color: #cc9 !important; }
 #-webkit-web-inspector .cm-css-builtin { color: #99aa00 !important; }
 #-webkit-web-inspector .cm-css-def { color: #cc9 !important; }
-#-webkit-web-inspector .cm-css-comment { color: #cccc99 !important; font-style: italic; }
+#-webkit-web-inspector .cm-css-comment { color: #666 !important; font-style: italic; }
 #-webkit-web-inspector .cm-css-meta { color: #6AEDFF !important;}
 #-webkit-web-inspector .cm-css-number { color: #cc9 !important; }
 #-webkit-web-inspector .cm-css-operator { color: #ccc !important; }
@@ -79,7 +79,7 @@
 
 
 /*--HTML--*/
-#-webkit-web-inspector .cm-xml-comment { color: #cccc99 !important; font-style: normal !important; }
+#-webkit-web-inspector .cm-xml-comment { color: #666 !important; font-style: normal !important; }
 #-webkit-web-inspector .cm-xml-error { color: #bf4c4c  !important; }
 #-webkit-web-inspector .cm-xml-string { color: #cccc99 !important; }
 #-webkit-web-inspector .cm-xml-tag { color: #ffcc55 !important; }
@@ -87,7 +87,7 @@
 #-webkit-web-inspector .cm-xml-link { color: #cccc99 !important; }
 
 /*BUG? selectors don't have xml prefix when editing html without viewing code in sources panel first */
-#-webkit-web-inspector .cm-comment { color: #cccc99 !important; font-style: normal !important; }
+#-webkit-web-inspector .cm-comment { color: #666 !important; font-style: normal !important; }
 #-webkit-web-inspector .cm-error { color: #bf4c4c  !important; }
 #-webkit-web-inspector .cm-string { color: #cccc99 !important; }
 #-webkit-web-inspector .cm-tag { color: #ffcc55 !important; }
@@ -137,7 +137,7 @@
 /*-- HTML --*/
 #-webkit-web-inspector .webkit-html-attribute-name {color:#99aa00!important;}
 #-webkit-web-inspector .webkit-html-attribute-value {color:#cccc99!important;}
-#-webkit-web-inspector .webkit-html-comment {color:#cccc99!important;font-style:normal;}
+#-webkit-web-inspector .webkit-html-comment,#-webkit-web-inspector .webkit-html-doctype {color:#666!important;font-style:normal;}
 #-webkit-web-inspector .webkit-html-resource-link,
 #-webkit-web-inspector .webkit-html-external-link {color:#cccc99!important;}
 #-webkit-web-inspector .webkit-html-tag,
@@ -919,11 +919,12 @@
 /* highlight children */
 #-webkit-web-inspector .panel.elements .parent.selected.expanded + .children,
 #-webkit-web-inspector .panel.elements .parent.hovered.expanded + .children {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 0;
   padding-bottom: 5px !important;
-  box-shadow: inset 0 0 30px 0 rgba(17,17,17,1);
-  border-bottom: 1px solid #1c1c25 !important;
+  background-color:rgba(0,0,0,.2);
+  margin-bottom:5px !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+  border-top: none !important;
 }
 
 /* fade closing tag of parent */
