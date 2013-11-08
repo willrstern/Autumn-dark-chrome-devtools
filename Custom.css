@@ -1,6 +1,6 @@
 /* Autumn Dark Theme v0.4.0
  *
-/* https://github.com/willrstern/Autumn-dark-chrome-devtools
+/* https://github.com/willrstern/autumn-dark
 /*
 /* Copyright 2013, All rights reserved
 /*
@@ -1095,6 +1095,10 @@
 /**********************************************/
 
 /*-- RESOURCES CONTENT --*/
+#-webkit-web-inspector .resource-view .script-view{
+  background: rgb(40, 42, 54)!important;
+}
+
 #-webkit-web-inspector .resource-view.image .title {
   color: #ccc !important;
 }
@@ -2087,8 +2091,13 @@
   color: #bbb !important;
 }
 
-#-webkit-web-inspector .data-grid tr.selected td *{
-  color: #ddd !important;
+
+#-webkit-web-inspector .data-grid tr.network-item td.status-column *{
+  color: #33aa22 !important;
+}
+
+#-webkit-web-inspector .data-grid tr.network-item.network-error-row td *{
+  color: #ff3355 !important;
 }
 
 /**********************************************
@@ -2112,3 +2121,4 @@
   background-color: #2E542F !important;
   border-radius: 3px;
 }
+
